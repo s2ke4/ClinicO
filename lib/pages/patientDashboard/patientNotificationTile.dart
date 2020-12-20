@@ -5,14 +5,22 @@ import 'package:flutter/material.dart';
 class PatNotTile extends StatelessWidget {
   Appointment appointment;
   String msg = "";
+  Icon icon;
   PatNotTile({this.appointment}) {
     msg = appointment.confirmed
-        ? "Your Appointment in ${appointment.clinicName} is confirmed " +
-            Icon(
-              Icons.pending_actions,
-              color: Colors.red,
-            ).toString()
+        ? "Your Appointment in ${appointment.clinicName} is confirmed "
         : "Your Appointment in ${appointment.clinicName} is pending";
+    icon = appointment.confirmed
+        ? Icon(
+            Icons.check_box,
+            color: Colors.green,
+            size: 30,
+          )
+        : Icon(
+            Icons.pending_actions,
+            color: Colors.red,
+            size: 30,
+          );
   }
   @override
   Widget build(BuildContext context) {
@@ -26,10 +34,25 @@ class PatNotTile extends StatelessWidget {
                     )));
       },
       child: Card(
-        child: ListTile(
-          title: Text(msg),
+          // child: ListTile(
+          //   title: Text(
+          //     msg,
+          //   ),
+          // ),
+          child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Row(
+          children: [
+            Text(
+              msg,
+              style: TextStyle(
+                fontSize: 17,
+              ),
+            ),
+            icon,
+          ],
         ),
-      ),
+      )),
     );
   }
 }

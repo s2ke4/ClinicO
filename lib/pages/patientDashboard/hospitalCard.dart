@@ -35,7 +35,7 @@ class HospitalCard extends StatelessWidget {
               SizedBox(height: pad),
               GestureDetector(
                 child: Text(
-                  doctor.displayName,
+                  'Dr. ' + doctor.displayName,
                   style: TextStyle(
                     fontSize: 14.0,
                     color: Colors.grey[600],
