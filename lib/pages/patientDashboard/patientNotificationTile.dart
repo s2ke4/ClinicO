@@ -7,7 +7,11 @@ class PatNotTile extends StatelessWidget {
   String msg = "";
   PatNotTile({this.appointment}) {
     msg = appointment.confirmed
-        ? "Your Appointment in ${appointment.clinicName} is confirmed"
+        ? "Your Appointment in ${appointment.clinicName} is confirmed " +
+            Icon(
+              Icons.pending_actions,
+              color: Colors.red,
+            ).toString()
         : "Your Appointment in ${appointment.clinicName} is pending";
   }
   @override

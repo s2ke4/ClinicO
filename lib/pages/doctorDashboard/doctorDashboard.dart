@@ -112,90 +112,141 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                       SizedBox(
                         height: 30,
                       ),
-                      Center(
-                        child: Text(
-                          'Dr. ' + doctor.displayName,
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
+                      Card(
+                          child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          children: [
+                            Center(
+                              child: Text(
+                                'Dr. ' + doctor.displayName,
+                                style: TextStyle(
+                                  fontSize: 24,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Center(
+                              child: Text(
+                                doctor.educationalQualification,
+                                style: TextStyle(
+                                  fontSize: 24,
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            Text(
+                              doctor.bio,
+                              style: TextStyle(
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
+                      )),
                       SizedBox(
-                        height: 30,
+                        height: 10,
                       ),
-                      Center(
-                        child: Text(
-                          doctor.educationalQualification,
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Center(
-                        child: Text(
-                          doctor.bio,
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Center(
-                        child: Text(
-                          'Address : ',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Center(
-                        child: Text(
-                          doctor.address,
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Center(
-                        child: Text(
-                          'Timing : ',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Center(
-                        child: Text(
-                          doctor.timing,
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Center(
-                        child: Text(
-                          'Fees : ' + doctor.fee + ' rs. at clinic',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
+                      Card(
+                        child: Padding(
+                            padding: EdgeInsets.all(20),
+                            child: Column(
+                              children: [
+                                Center(
+                                  child: Text(
+                                    'Address : ',
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      color: Colors.black54,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Center(
+                                  child: Text(
+                                    doctor.address,
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Center(
+                                  child: Text(
+                                    'Timing : ',
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      color: Colors.black54,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Center(
+                                  child: Text(
+                                    doctor.timing,
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Center(
+                                  child: Text(
+                                    'UPI Id : ',
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      color: Colors.black54,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Center(
+                                  child: Text(
+                                    doctor.paymentMethod,
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 30,
+                                ),
+                                Center(
+                                  child: Text(
+                                    'Fees : ',
+                                    style: TextStyle(
+                                      fontSize: 24,
+                                      color: Colors.black54,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Center(
+                                  child: Text(
+                                    doctor.fee + ' rs. at clinic',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )),
                       ),
                       SizedBox(
                         height: 70,
